@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
 public class ParaMandar implements Runnable{
+    String[] mensajitos = {"@1 hola", "que rollo"};
     final BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
     final DataOutputStream salida ;
     public ParaMandar(Socket s) throws IOException {
@@ -13,11 +14,15 @@ public class ParaMandar implements Runnable{
 
     @Override
     public void run() {
+        int nMensaje = 0; 
         while ( true ){
             String mensaje;
             try {
-                mensaje = teclado.readLine();
-                salida.writeUTF(mensaje);
+                while (nMensaje < mensajitos.length) {                    
+                    mensaje = mensajitos[nMensaje];
+                    salida.writeUTF(mensaje);
+                    nMensaje++;
+                }
             } catch (IOException ex) {
             }
 
