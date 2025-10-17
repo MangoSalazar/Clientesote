@@ -12,5 +12,11 @@ public class Sesiones {
         return "El nombre o la contraseña estan incorrectos";
     }
     
+    public boolean numCaracteres (String nombre, String contraseña){
+        if (nombre.length() < 15 && nombre.length() > 3  && contraseña.length() < 10 && contraseña.length() > 3 ) {
+            return true;
+        }
+        return false;
+    }
 
 }
