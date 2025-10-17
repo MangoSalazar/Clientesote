@@ -18,7 +18,6 @@ public class ParaMandar implements Runnable {
     @Override
     public void run() {
         mandarMensaje();
-
     }
 
     public void mandarMensaje() {
