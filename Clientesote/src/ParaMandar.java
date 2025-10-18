@@ -28,6 +28,7 @@ public class ParaMandar implements Runnable {
                 //De momento creare el metodo de enviar test para provar el cliente y el servidor
                 nMensaje = enviarTest(nMensaje, mensaje);
             } catch (IOException ex) {
+                
             }
 
         }
