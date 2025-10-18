@@ -7,7 +7,7 @@ import java.net.Socket;
 
 public class ParaMandar implements Runnable {
 
-    String[] mensajitos = {"@0 mensaje privado", "primer mensaje global", "segundo mensaje global", "registrar mango mango"};
+    String[] mensajitos = {"@0 mensaje privado", "primer mensaje global", "segundo mensaje global", "login kikesion kikesion", "#mango"};
     final BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
     final DataOutputStream salida;
 
@@ -36,9 +36,7 @@ public class ParaMandar implements Runnable {
     public int enviarTest(int nMensaje, String mensaje) throws IOException {
         while (nMensaje < mensajitos.length) {
             mensaje = mensajitos[nMensaje];
-            if (nMensaje < 4) {
-                salida.writeUTF(mensaje);
-            }
+            salida.writeUTF(mensaje);
             nMensaje++;
         }
         return nMensaje;
