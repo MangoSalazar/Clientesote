@@ -7,8 +7,8 @@ import java.net.Socket;
 
 public class ParaMandar implements Runnable {
 
-    //String[] mensajitos = {"@0 mensaje privado", "primer mensaje global", "segundo mensaje global", "login mango mango"};
-    String[] mensajitos = {"@3", "primer mensaje global", "segundo mensaje global", "login milton milton"};    
+    //String[] mensajitos = {"login mango mango","@0 prueba de mensaje directo"};
+    String[] mensajitos = {"login milton milton","@0 prueba de mensaje directo","%0,1 prueba de mensaje grupal", "prueba de broadcast"};    
     final BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
     final DataOutputStream salida;
 
